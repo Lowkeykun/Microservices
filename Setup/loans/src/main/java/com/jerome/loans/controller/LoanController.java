@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -118,14 +119,14 @@ public class LoanController {
     }
     )
     @PutMapping("/update")
-    public ResponseEntity<ResponseDto> updateLoan(@RequestBody LoansDto loansDto){
+    public ResponseEntity<ResponseDto> updateLoan(@Valid @RequestBody LoansDto loansDto){
         boolean isUpdated = loanService.updateLoan(loansDto);
         if(isUpdated){
             return ResponseEntity
                     .status(HttpStatus.OK)
                     .body(new ResponseDto(
-                            LoansConstants.STATUS_201,
-                            LoansConstants.MESSAGE_201
+                            LoansConstants.STATUS_200,
+                            LoansConstants.MESSAGE_200
                     ));
         } else {
             return ResponseEntity
@@ -166,8 +167,8 @@ public class LoanController {
             return ResponseEntity
                     .status(HttpStatus.OK)
                     .body(new ResponseDto(
-                            LoansConstants.STATUS_201,
-                            LoansConstants.MESSAGE_201
+                            LoansConstants.STATUS_200,
+                            LoansConstants.MESSAGE_200
                     ));
         } else {
             return ResponseEntity
