@@ -1,0 +1,18 @@
+spring:
+  config:
+    activate:
+      on-profile:
+        "qa"
+
+build:
+  version:
+    "1.0"
+
+cards:
+  message: "Welcome to EazyBank cards related QA APIs "
+  contactDetails:
+    name: "Jerome Felicilda - Lead QA"
+    email: "contact@jerome.gmail.com"
+  onCallSupport:
+    - (444) 699-6699
+    - (888) 996-9966

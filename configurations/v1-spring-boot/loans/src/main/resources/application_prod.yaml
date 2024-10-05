@@ -1,0 +1,18 @@
+spring:
+  config:
+    activate:
+      on-profile:
+        "prod"
+
+build:
+  version:
+    "2.0"
+
+loans:
+  message: "Welcome to EazyBanks Loans related to Prod APIs"
+  contactDetails:
+    name: "Jerome Felicilda - Product Owner"
+    email: "contact@jerome.com"
+  onSupportCall:
+    - (969) 696-9696
+    - (696) 969-6969

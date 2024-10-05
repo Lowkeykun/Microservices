@@ -1,0 +1,18 @@
+spring:
+  config:
+    activate:
+      on-profile:
+        "prod"
+
+build:
+  version:
+    "2.0"
+
+cards:
+  message: "Welcome to EazyBank cards related PROD APIs "
+  contactDetails:
+    name: "Jerome Felicilda - Product Owner"
+    email: "contact@jerome.gmail.com"
+  onCallSupport:
+    - (696) 699-6699
+    - (969) 996-9966

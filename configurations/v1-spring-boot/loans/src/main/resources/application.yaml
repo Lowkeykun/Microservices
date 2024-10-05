@@ -1,0 +1,37 @@
+server:
+  port: 8090
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: jerome
+    password: ''
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  config:
+    import:
+      - "application_prod.yaml"
+      - "application_qa.yaml"
+  profiles:
+    active:
+      "prod"
+
+build:
+  version:
+    "3.0"
+
+loans:
+  message: "Welcome to EazyBanks Loans related to local APIs"
+  contactDetails:
+    name: "Jerome Felicilda - Technical Architect"
+    email: "contact@jerome.com"
+  onCallSupport:
+    - (969) 696-9696
+    - (696) 969-6969

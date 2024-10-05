@@ -1,0 +1,17 @@
+spring:
+  config:
+    activate:
+      on-profile:
+        "prod"
+
+build:
+  version: "3.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related PROD APIs "
+  contactDetails:
+    name: "Jerome Felicilda - Product Owner"
+    email: "contact@jerome.com"
+  onCallSupport:
+    - (777) 555-1234
+    - (777) 523-1345

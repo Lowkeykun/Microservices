@@ -1,0 +1,36 @@
+server:
+  port: 9000
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: jerome
+    password: ''
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  config:
+    import:
+      - "application_prod.yaml"
+      - "application_qa.yaml"
+  profiles:
+    active:
+      "qa"
+
+build:
+  version:
+    "3.0"
+
+cards:
+  message: "Welcome to EazyBank cards related local APIs "
+  contactDetails:
+    name: "Jerome Felicilda - Technical Architect"
+    email: "contact@jerome.gmail.com"
+  onCallSupport:
+    - (111) 699-6699
+    - (222) 996-9966
